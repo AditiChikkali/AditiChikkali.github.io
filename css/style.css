@@ -13,8 +13,12 @@ Import Google Fonts
 --------------------*/
 
 body {
-	margin: 0px;
-	font-family: "Fira Code", monospace;
+	body {
+    font-family: "Fira Code", monospace;
+    background-color: white; /* Set background to white */
+    margin: 0;
+    padding: 0;
+}
     
 }
 
@@ -231,7 +235,11 @@ font-weight: 700;
 	font-size: 37px;
 }
 
-
+#about-me img {
+    border-radius: 50%; /* Makes the image circular */
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto;
+}
 
 /*--------------------
 4.3. Portfolio
@@ -245,7 +253,26 @@ body {
 .row.row-0-gutter {
     display: block;
 }
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-top: 15px;
+}
 
+/* Skill Box */
+.skill-box {
+    padding: 8px 15px;
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    font-family: "Fira Code", monospace;
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 .project {
     background-color: transparent; /* Keep background transparent */
