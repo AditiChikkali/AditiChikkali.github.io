@@ -260,6 +260,7 @@ body {
     margin-top: 15px;
 }
 
+
 /* Skill Box */
 .skill-box {
     padding: 8px 15px;
@@ -312,6 +313,17 @@ body {
     text-decoration: underline;
 }
 
+.blog-item a {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.blog-item a::after {
+    content: ' →'; /* Unicode arrow */
+    font-size: 2rem; /* Optional: Adjust size */
+    color: inherit; /* Matches the text color */
+}
+
 
 
 /*--------------------
@@ -346,13 +358,39 @@ body {
 	margin: 0;
 	background-color: #F9F9F9;
 }
+.navbar-brand {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center content */
+    gap: 20px; /* Add spacing between elements */
+}
+
+.navbar-brand h1 {
+    margin: 0; /* Remove default margin */
+    font-family: "Fira Code", monospace;
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
 .typing-effect {
-  font-family: 'Fira Code', monospace;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid black;
-  width: 0;
-  animation: typing 3s steps(12, end), blink-caret 0.75s step-end infinite;
+    border-right: 3px solid black; /* Typing caret effect */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+    font-size: 3rem;
+    font-weight:600;
+}
+
+.subtitle h4 {
+    margin: 0; /* Remove default margins */
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem; /* Smaller font size for subtitle */
+    font-weight: 500;
+    color: #555; /* Dark gray text */
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 @keyframes typing {
