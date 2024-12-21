@@ -235,11 +235,40 @@ font-weight: 700;
 	font-size: 37px;
 }
 
-#about-me img {
-    border-radius: 50%; /* Makes the image circular */
-    max-width: 100%; /* Ensures the image doesn't overflow its container */
-    height: auto;
+.about-content {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align content */
+  gap: 20px; /* Add space between the image and text */
 }
+
+.about-image img {
+  max-width: 100%; /* Ensure the image does not overflow */
+  height: auto; /* Maintain the aspect ratio */
+  
+}
+
+.about-text {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #252525;
+  line-height: 1.6;
+  text-align: left; /* Align text to the left */
+}
+.about-text h4{
+    font-weight:450;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .about-image img {
+    margin-bottom: 20px; /* Add space below the image */
+  }
+}
+
 
 /*--------------------
 4.3. Portfolio
@@ -383,15 +412,7 @@ body {
     font-weight:600;
 }
 
-.subtitle h4 {
-    margin: 0; /* Remove default margins */
-    font-family: "Fira Code", monospace;
-    font-size: 1.5rem; /* Smaller font size for subtitle */
-    font-weight: 500;
-    color: #555; /* Dark gray text */
-    letter-spacing: 0.5px;
-    white-space: nowrap; /* Prevent wrapping */
-}
+
 
 @keyframes typing {
   from { width: 0; }
